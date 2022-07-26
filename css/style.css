@@ -35,3 +35,50 @@ header .flex_img {
     width: 30px;
     margin-left: 15px;
 }
+
+/* MAIN */
+section {
+    background-color: #1e2d3b;
+    height: calc(100vh - 50px);
+    padding-top: 55px;
+}        
+/* row */
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* col */
+.col {
+    margin: 8px 0;
+    width: calc((100% / 5) - 23px);
+}
+/* album-card */
+.album_card {
+    padding: 16px;
+    background-color: #2e3a46;
+    height: 280px;
+}
+.album_card img {
+    max-width: 130px;
+    margin: 0 auto;
+}
+.album_details {
+    text-align: center;
+}
+.album_details h3 {
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 15px;
+    margin: 16px 3px;
+}
+.album_text {
+    color: #857f7b;
+}
+.album_text div:first-child {
+    font-size: 14px;
+}
+.album_text div:last-child {
+    font-size: 12px;
+}
