@@ -9,9 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style_ajax.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <link rel="stylesheet" href="css/style_ajax.css">
 </head>
 <body>
     <div id="root">
@@ -19,9 +19,12 @@
         <header>
             <img src="img/logo_spotify.png" alt="spotify_logo">
             
-            <select @change="changeGenre($event)">
-                <option value="All">All</option>
-                <option v-for="genre in genreArray" :value="genre">{{ genre }}</option>
+            <select v-model="userGenre" @change="getDiscsFromAPI">
+                <option value="all">All</option>
+                <option value="Rock">Rock</option>
+                <option value="Pop">Pop</option>
+                <option value="Jazz">Jazz</option>
+                <option value="Metal">Metal</option>
             </select>
         </header>
 
